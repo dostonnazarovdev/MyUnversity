@@ -1,0 +1,14 @@
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\bin\Debug\net6.0\MyUnversity.exe
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\bin\Debug\net6.0\MyUnversity.deps.json
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\bin\Debug\net6.0\MyUnversity.runtimeconfig.json
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\bin\Debug\net6.0\MyUnversity.dll
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\bin\Debug\net6.0\MyUnversity.pdb
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.GeneratedMSBuildEditorConfig.editorconfig
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.AssemblyInfoInputs.cache
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.AssemblyInfo.cs
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.csproj.CoreCompileInputs.cache
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.dll
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\refint\MyUnversity.dll
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.pdb
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.genruntimeconfig.cache
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\ref\MyUnversity.dll
