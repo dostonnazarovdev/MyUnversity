@@ -12,3 +12,4 @@ E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\refint\MyUnversit
 E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.pdb
 E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.genruntimeconfig.cache
 E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\ref\MyUnversity.dll
+E:\.NET\MyOwnProjects\MyUnversity\MyUnversity\obj\Debug\net6.0\MyUnversity.sourcelink.json

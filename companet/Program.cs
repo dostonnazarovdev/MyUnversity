@@ -16,10 +16,14 @@
             Subject tempSub = unveristyManger.getSubjectId(1);
             Console.WriteLine(tempSub.Name);
 
+            Subject tempSubject = unveristyManger.getSubjectByName("english");
+            Console.WriteLine(tempSubject.Name);
 
-            Code code = new Code();
-            code.Name="code";
-            System.Console.WriteLine(code.Name);
+            Dean tempDean = unveristyManger.createDean("Aziz", "Azizov", 25, "2022.12.12", "Matimatika", 2200000);
+            Console.WriteLine(tempDean.Name + ", " + tempDean.Surname + ", " + tempDean.Age + ", " + tempDean.BirthDate + ", " + tempDean.Faculty + ", " + tempDean.Salary);
+
+
+
 
         }
 
