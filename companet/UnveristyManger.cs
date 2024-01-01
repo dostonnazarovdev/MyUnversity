@@ -10,9 +10,8 @@ namespace MyUnversity
     {
         private string name;
         private Subject[] subjectArray = new Subject[5];
-        private Dean[]deanArray = new Dean[5];
+        private Dean[] deanArray = new Dean[5];
         private int deanIndex = 0;
-       
         private int subIndex = 0;
         private int generalId = 1;
 
@@ -28,7 +27,6 @@ namespace MyUnversity
                 name = value;
             }
         }
-
         public string Address { get; set; }
 
         public Subject createSubject(string name, int semester)
@@ -54,8 +52,6 @@ namespace MyUnversity
             return null;
         }
 
-
-
         public Subject getSubjectByName(string name)
         {
 
@@ -71,28 +67,54 @@ namespace MyUnversity
 
         public Dean createDean(string name, string surname, int age, string birthDate, string faculty, double salary)
         {
+            Dean exist = getDeanByFaculty(faculty);
+            if (exist != null)
+            {
+                return null;
+            }
+
             Dean dean = new Dean();
-            dean.Name=name;
-            dean.Surname=surname;
-            dean.Age=age;
-            dean.BirthDate=birthDate;
-            dean.Faculty=faculty;
-            dean.Salary=salary;
-            deanArray[deanIndex++]=dean;
-            dean.Id=generalId++;
+            dean.Name = name;
+            dean.Surname = surname;
+            dean.Age = age;
+            dean.BirthDate = birthDate;
+            dean.Faculty = faculty;
+            dean.Salary = salary;
+            deanArray[deanIndex++] = dean;
+            dean.Id = generalId++;
             return dean;
         }
 
-        public Dean getDeanByiId(int id)
+        public Dean getDeanById(int id)
         {
+            foreach (Dean dean in deanArray)
+            {
+                if (dean != null && dean.Id.Equals(id))
+                {
+                    return dean;
+                }
+            }
 
             return null;
         }
 
-        public Dean getDeanEmployedDateById(int id)
+        public Dean getDeanEmployeedDateById(int id)
         {
-          
-          return null;
+
+
+            return null;
+        }
+
+        public Dean getDeanByFaculty(string faculty)
+        {
+            foreach (Dean dean in deanArray)
+            {
+                if(dean!=null && dean.Faculty.Equals(faculty)){
+                    return dean;
+                }
+
+            }
+            return null;
         }
 
 
