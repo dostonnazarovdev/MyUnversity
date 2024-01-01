@@ -10,16 +10,18 @@ public class Dean
     private string faculty;
     private double salary;
 
+  
+
 
     public int Id
     {
         get
         {
-               return id;
+            return id;
         }
         set
         {
-            id=value;
+            id = value;
         }
     }
     public string Name
@@ -88,6 +90,7 @@ public class Dean
             salary = value;
         }
     }
+    public DateTime CreatedDate { get; set; }
 
-
+  
 }
