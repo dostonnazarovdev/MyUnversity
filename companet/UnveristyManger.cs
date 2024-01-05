@@ -17,6 +17,8 @@ namespace MyUnversity
         private Professor[] professorArray = new Professor[10];
         private Student[] studentArray = new Student[10];
         private StudentSubject[] studentSubjectArray = new StudentSubject[10];
+        private Exam[] examArray = new Exam[10];
+        private int examIndex = 0;
         private int studentSubjectIndex = 0;
         private int studentIndex = 0;
         private int professorIndex = 0;
@@ -306,5 +308,21 @@ namespace MyUnversity
 
             return temp;
         }
+
+        //CreatedExam
+        public Exam createExam(int studentId, int subjectId, int grade)
+        {
+            Exam exam = new Exam();
+            exam.Id = generalId++;
+            exam.StudentId = studentId;
+            exam.SubjectId = subjectId;
+            exam.Grade = grade;
+            exam.CreatedDate = DateTime.Now;
+            examArray[examIndex++] = exam;
+            return exam;
+        }
+
+
+
     }
 }
