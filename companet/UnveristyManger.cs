@@ -322,7 +322,36 @@ namespace MyUnversity
             return exam;
         }
 
+        //getStudentExamList
+        public Exam[] getStudentExamList(int studentId)
+        {
+            Exam[] temp = new Exam[examArray.Length];
+            int i = 0;
+            foreach (Exam exam in examArray)
+            {
+                if (exam != null && exam.StudentId.Equals(studentId))
+                {
+                    temp[i++] = exam;
+                }
+            }
+            return temp;
+        }
 
-
+       //getStudentListByExamSubjectId
+        public Student[] getStudentListByExamSubjectId(int subjectId)
+        {
+            Student[] temp = new Student[studentArray.Length];
+            int i = 0;
+            foreach (var item in studentArray)
+            {
+                if (item != null && item.SubjectId.Equals(subjectId))
+                {
+                 temp[i++]=item;
+                }
+            }
+            return temp;
+        }
+   
+   
     }
 }
