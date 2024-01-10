@@ -52,8 +52,8 @@
       //    System.Console.WriteLine(item.Name + ", "+item.Age); 
       //   }
 
-      // Professor professor = unveristyManger.createProfessor("Jamol","Jamolov",13,"2022.12.12",1230000,2);
-      //Console.WriteLine(professor.Name + ", " + professor.Surname + ", " + professor.Age + ", " + professor.BirthDate + ", " + professor.Salary);
+       Professor professor = unveristyManger.createProfessor("Jamol","Jamolov",13,"2022.12.12",1230000);
+       Console.WriteLine( professor.Id+"  "+professor.Name + ", " + professor.Surname + ", " + professor.Age + ", " + professor.BirthDate + ", " + professor.Salary);
 
       Student student1 = unveristyManger.createStudent("ali", "aliyev", 19, DateTime.Now, 1);
       Student student2 = unveristyManger.createStudent("vali", "valiyev", 20, DateTime.Now, 2);
@@ -77,13 +77,26 @@
 
       System.Console.WriteLine(Environment.NewLine);
       var studentArr = unveristyManger.getStudentListBySubjectId(1);
-      foreach (var item in studentArr)
-      {
-        System.Console.WriteLine(item.id + ", " + item.name + ", " + item.surname+", level => "+item.level);
-      }
+      // foreach (var item in studentArr)
+      // {
+      //   System.Console.WriteLine(item.id + ", " + item.name + ", " + item.surname + ", level => " + item.level);
+      // }
 
+      // Student[] students1 = unveristyManger.getStudentListByExamGrate(2, 4);
+      // System.Console.WriteLine(students1[0].Name);
+      //  for (int i = 0; i < students1.Length; i++)
+      //  {
+      //   System.Console.WriteLine(students1[i].Name+", "+students1[i].SurName+", "+students1[i].age+", "+students1[i].Level+", ");
+      //  }
+   
+        
+
+
+    // Event creat =  unveristyManger.createEvent("MDC MEETING",11);
+    // System.Console.WriteLine(creat.Name+" "+creat.ProfessorId);
+
+
+    
     }
-
-
   }
 }

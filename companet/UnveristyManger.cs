@@ -18,6 +18,8 @@ namespace MyUnversity
         private Student[] studentArray = new Student[10];
         private StudentSubject[] studentSubjectArray = new StudentSubject[10];
         private Exam[] examArray = new Exam[10];
+        private Event[] eventArray = new Event[10];
+        private int eventIndex = 0;
         private int examIndex = 0;
         private int studentSubjectIndex = 0;
         private int studentIndex = 0;
@@ -207,7 +209,7 @@ namespace MyUnversity
             return securities;
         }
         //createProfessor
-        public Professor createProfessor(string name, string surname, int age, string birthDate, double salary, int subjectId)
+        public Professor createProfessor(string name, string surname, int age, string birthDate, double salary)
         {
             Professor professor = new Professor();
             professor.Id = generalId++;
@@ -216,7 +218,6 @@ namespace MyUnversity
             professor.Age = age;
             professor.BirthDate = birthDate;
             professor.Salary = salary;
-            professor.subject.Id = subjectId;
             professorArray[professorIndex++] = professor;
             return professor;
 
@@ -337,7 +338,7 @@ namespace MyUnversity
             return temp;
         }
 
-       //getStudentListByExamSubjectId
+        //getStudentListByExamSubjectId
         public Student[] getStudentListByExamSubjectId(int subjectId)
         {
             Student[] temp = new Student[studentArray.Length];
@@ -346,12 +347,112 @@ namespace MyUnversity
             {
                 if (item != null && item.SubjectId.Equals(subjectId))
                 {
-                 temp[i++]=item;
+                    temp[i++] = item;
                 }
             }
             return temp;
         }
-   
-   
+
+        // getStudentListByExamGrate
+        public Student[] getStudentListByExamGrate(int subjectId, int grade)
+        {
+            Student[] temp = new Student[studentArray.Length];
+            int i = 0;
+            //   Subject subject = getSubjectById(subjectId);
+
+            foreach (var student in studentArray)
+            {
+                if (student != null && student.Level.Equals(grade) && student.SubjectId.Equals(subjectId))
+                {
+                    temp[i++] = student;
+                }
+
+            }
+
+            return temp;
+        }
+
+        // createEvent
+        public Event createEvent(string name, int professorId)
+        {
+            Event evens = new Event();
+            foreach (var item in eventArray)
+            {
+                if (item != null && item.ProfessorId.Equals(professorId))
+                {
+                    evens.Name = name;
+                    evens.ProfessorId = professorId;
+                    evens.Id = generalId++;
+                    eventArray[eventIndex++] = evens;
+                }
+                return null;
+            }
+
+
+
+            return evens;
+        }
+        //getEventListByProfessorId
+        public Event[] getEventListByProfessorId(int professorId)
+        {
+            Event[] events = new Event[eventArray.Length];
+            int i = 0;
+            foreach (var newEvent in eventArray)
+            {
+                if (newEvent != null && newEvent.Id.Equals(professorId))
+                {
+                    events[i++] = newEvent;
+                }
+            }
+            return events;
+        }
+
+        //getAllEmployeeList
+        public Object[] getAllEmployeeList()
+        {
+
+            Person[] employeeArray = new Person[securityIndex + deanIndex];
+            int index = 0;
+
+            foreach (Security security in securityArray)
+            {
+                if (security != null)
+                {
+                    employeeArray[index++] = security;
+                }
+            }
+
+            foreach (Dean dean in deanArray)
+            {
+                if (dean != null)
+                {
+                    employeeArray[index++] = dean;
+                }
+            }
+
+            return employeeArray;
+        }
+        // getAllEmployeeListSalary
+        public Double getAllEmployeeListSalary()
+        {
+            double totalSalary = 0.0;
+            foreach (Dean dean in deanArray)
+            {
+                if (dean != null)
+                {
+                    totalSalary += dean.Salary;
+                }
+            }
+
+            foreach (Security security in securityArray)
+            {
+                if (security != null)
+                {
+                    totalSalary += security.Salary;
+                }
+            }
+            return totalSalary;
+        }
+
     }
 }

@@ -64,11 +64,13 @@ public class Student
     {
         get
         {
-            return level;
+             return level;
         }
         set
         {
-            level = value;
+            if(level>0 && level<6){
+                level=value;
+            }
         }
     }
     public Subject SubjectId
